@@ -15,7 +15,7 @@ This API was developed with :
 * SpringBoot 2.7.12
 * MySql Data Base
 ## Screenshots of the project
-*OverView of the database structure :
+* OverView of the database structure :
 ![Diagram class](./src/main/resources/static/DataBaseSnap.jpg)
 
 * Usecase "Add a message" example :
