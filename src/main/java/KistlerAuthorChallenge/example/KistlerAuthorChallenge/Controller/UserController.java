@@ -43,7 +43,7 @@ public class UserController {
     }
 
     @PostMapping("/addMessage/{author_id}")
-    public Message addMessage(@PathVariable("author_id")Long author_id, @RequestParam String message_content)
+    public MessageDTO addMessage(@PathVariable("author_id")Long author_id, @RequestParam String message_content)
     {
         return userService.addMessage(author_id,message_content);
     }

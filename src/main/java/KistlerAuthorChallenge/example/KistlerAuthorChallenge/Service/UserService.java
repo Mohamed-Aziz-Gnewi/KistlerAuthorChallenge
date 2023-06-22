@@ -67,7 +67,7 @@ public class UserService {
 
     }
     //Add new message
-    public Message addMessage(Long author_id,String message_content)
+    public MessageDTO addMessage(Long author_id,String message_content)
     {
         Message message = new Message();
         message.setMessage_content(message_content);
@@ -76,7 +76,11 @@ public class UserService {
                 return null;
         message.setAuthor(author);
         messageRepository.save(message);
-        return message;
+        MessageDTO messageDTO = new MessageDTO();
+        messageDTO.setAuthor_name(author.getUsername());
+        messageDTO.setMessage_content(message_content);
+
+        return messageDTO;
 
     }
 
