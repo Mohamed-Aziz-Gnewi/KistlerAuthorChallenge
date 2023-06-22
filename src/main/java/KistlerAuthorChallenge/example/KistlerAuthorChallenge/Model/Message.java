@@ -16,7 +16,7 @@ public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long message_id;
-    
+
     @Column(columnDefinition = "TEXT")
     String message_content;
 
